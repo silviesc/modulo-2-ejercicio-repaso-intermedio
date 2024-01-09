@@ -1,0 +1,18 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.btn {
+    text-transform: capitalize;
+    background-color: rgb(127, 255, 176);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.message {
+    background-color: rgb(127, 255, 176);
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+}
