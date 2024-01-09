@@ -9,8 +9,8 @@
     - Asignamos los valores de Piedra, Papel y Tijera a los números de ese intervalo:
         - número <= 3 --> Piedra
         - número >= 7 --> Papel
-        - númetro entre 4 y 6 --> Tijera
-    - Comparamos el resultado del usuario con el del ordenador y cremaos las condiciones para ver quién gana
+        - número entre 4 y 6 --> Tijera
+    - Comparamos el resultado del usuario con el del ordenador y creamos las condiciones para ver quién gana
     - Añadimos en el HTML el mensaje de "Empate", "¡Has ganado!" o "¡Has perdido!" que se refiere al resultado del usuario.
 
     BONUS:
