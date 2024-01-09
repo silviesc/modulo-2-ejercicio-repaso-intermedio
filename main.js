@@ -3,8 +3,8 @@
 const btn = document.querySelector('.js-btn');
 const msg = document.querySelector('.js-msg');
 const option = document.querySelector('.js-option');
-// const player = document.querySelector('.js-player');
-// const computer = document.querySelector('.js-computer');
+const player = document.querySelector('.js-player');
+const computer = document.querySelector('.js-computer');
 
 const movimientos = ['piedra', 'papel', 'tijera'];
 
@@ -35,12 +35,34 @@ function compareOptions (user, computer) {
     return result;
 }
 
+function scores () {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 10; i++) {
+        const userMove = option.value;
+        const computerMove = computerOption();
+        const resultScore = compareOptions(userMove, computerMove);
+        if (resultScore === '¡Has ganado!') {
+            playerScore = 1;
+            computerScore = 0;
+        } else if (resultScore === '¡Has perdido!') {
+            computerScore = 1;
+            playerScore = 0;
+        }
+    }
+    player.innerHTML = `Jugador: ${playerScore}`;
+    computer.innerHTML = `Computadora: ${computerScore}`;
+}
+
 function handleClick (event) {
     event.preventDefault();
     const userOption = option.value;
     const computerMove = computerOption();
-    msg.innerHTML = compareOptions(userOption, computerMove);
+    const result = compareOptions(userOption, computerMove);
+    msg.innerHTML = result;
+    scores();
     console.log(computerMove);
+   
 }
 
 btn.addEventListener('click', handleClick);
